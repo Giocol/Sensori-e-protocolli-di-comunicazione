@@ -7,6 +7,7 @@ Giorgio Colomban
 ![Logo POuL](lib/img/logo-text-white.svg)
 
 ----
+
 # Cos'è un sensore?
 
 > Un sensore è un componente che fisicamente effettua la trasformazione della grandezza
@@ -77,6 +78,16 @@ Fortunatamente, i principali standard di comunicazione per sensori sono solo 3:
 
 ## Protocolli di comunicazione
 ### UART
+
+---
+
+## Protocolli di comunicazione
+### SPI
+
+---
+
+## Protocolli di comunicazione
+### I2C
 
 ----
 
