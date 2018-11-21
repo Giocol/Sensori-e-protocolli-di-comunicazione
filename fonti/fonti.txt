@@ -1,5 +1,0 @@
-1. https://www.megunolink.com/articles/5-tips-for-arduino-programs/
-2. http://forum.arduino.cc/index.php?topic=44924.0
-3. https://learn.adafruit.com/memories-of-an-arduino/optimizing-program-memory (sia questo sia pagina successiva, non utilissimo ma da rivedere la questione del bootloader )
-4. https://msdn.microsoft.com/en-us/magazine/dn904673.aspx (avanzato, per visual C++ ma per la parte più avanzata funziona)5. https://www.thegeekstuff.com/2015/01/c-cpp-code-optimization/ (anche questo avanzato, più per questioni di C++)
-
