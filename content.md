@@ -6,7 +6,8 @@ Giorgio Colomban
 
 ![Logo POuL](lib/img/logo-text-white.svg)
 
-----
+
+---
 
 # Cos'è un sensore?
 
@@ -79,6 +80,32 @@ Fortunatamente, i principali standard di comunicazione per sensori sono solo 3:
 ## Protocolli di comunicazione
 ### UART
 
+Il protocollo __UART__ (Universal Asynchronous Receiver/Transmitter) è un protocollo che permette la __trasmissione asincrona__ su una porta seriale (pin digitali __GPIO 0 e GPIO 1__ su Arduino Uno).
+
+Lavora su due canali: __TX__ in trasmissione e __RX__ in ricezione.
+
+![RX_TX](lib/img/UART_RX_TX.jpeg)
+
+----
+
+## Protocolli di comunicazione
+### UART
+
+La comunicazione è asincrona, quindi __non scandita da un clock__, e di conseguenza, per assicurasi che i dati ricevuti siano gli stessi dati trasmessi, è necessario "spezzare" il flusso di dati in pacchetti di formato prestabilito.
+
+![RX_TX](lib/img/UART_packet.jpeg)
+
+----
+
+## Protocolli di comunicazione
+### UART
+
+Altre informazioni su UART:
+
+* La comunicazione è __half duplex__, quindi due dispositivi __non possono trasmettere contemporaneamente__
+* Si è limitati a due __due device__ per bus
+* Non è necessario gestire i dati al singolo bit, ma è possibile __astrarre tramite librerie C++__ (come __Serial__ e __SoftwareSerial__)
+
 ---
 
 ## Protocolli di comunicazione
@@ -89,7 +116,7 @@ Fortunatamente, i principali standard di comunicazione per sensori sono solo 3:
 ## Protocolli di comunicazione
 ### I2C
 
-----
+---
 
 # Fonti e risorse utili
 
