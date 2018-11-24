@@ -84,7 +84,7 @@ Il protocollo __UART__ (Universal Asynchronous Receiver/Transmitter) è un proto
 
 Lavora su due canali: __TX__ in trasmissione e __RX__ in ricezione.
 
-![RX_TX](lib/img/UART_RX_TX.jpeg)
+![RX_TX](lib/img/UART_RX_TX.jpg)
 
 ----
 
@@ -93,7 +93,7 @@ Lavora su due canali: __TX__ in trasmissione e __RX__ in ricezione.
 
 La comunicazione è asincrona, quindi __non scandita da un clock__, e di conseguenza, per assicurasi che i dati ricevuti siano gli stessi dati trasmessi, è necessario "spezzare" il flusso di dati in pacchetti di formato prestabilito.
 
-![RX_TX](lib/img/UART_packet.jpeg)
+![packet](lib/img/UART_packet.jpg)
 
 ----
 
@@ -110,6 +110,64 @@ Altre informazioni su UART:
 
 ## Protocolli di comunicazione
 ### SPI
+
+Il protocollo __SPI__ (Serial Peripheral Interface) è molto diverso da UART.
+
+* È __sincrono__
+* Segue un modello __master-slave__, con un device master e uno o più device slave
+* Richiede più di due canali per essere implementato
+* È __full duplex__, quindi la trasmissione è __bidirezionale__
+
+----
+
+## Protocolli di comunicazione
+### SPI
+
+![SPI](lib/img/SPI.jpg)
+
+* __MOSI__(Master In, Slave Out): canale di trasmissione dati da master a slave
+* __SCK__ (SPI Clock): stabilisce la velocità di trasmissione e la sincronizza.
+* __SS__ (Slave Select): seleziona lo slave con cui il master comunicherà
+* __MISO__(Master In, Slave Out): canale di trasmissione dati da slave a master
+
+----
+
+## Protocolli di comunicazione
+### SPI - Esempio con più slaves
+
+![SPI_twoslaves](lib/img/SPI_twoslaves.jpg)
+
+Il master necessita di una singolo canale MISO, anche in presenza di più slaves
+
+----
+
+## Protocolli di comunicazione
+### SPI - Clock
+
+In __SPI__ il segnale di clock è definito da due proprietà:
+* __CPOL__ (Clock POLarity): indica il livello
+ (__HIGH__ o __LOW__) che corrisponde allo stato di idle, in cui il master non comunica con alcuno slave
+* __CPHA__ (Clock PHAse): indica il fronte di clock (__salita__ o __discesa__) sul quale vengono letti i dati
+
+Spiegazione più approfondita [qui](https://www.deviceplus.com/how-tos/arduino-guide/arduino-communication-protocols-tutorial/)
+
+----
+
+## Protocolli di comunicazione
+### SPI - Implementazione su Arduino
+
+Per implementare una connessione SPI su Arduino vanno usati 4 pin digitali, uno per canale:
+* __SCK:__ GPIO 13 o ICSP 3
+* __MOSI:__ GPIO 11 o ICSP 4
+* __MISO:__ GPIO 12 o ICSP 1
+* __SS:__ un qualsiasi pin digitale, settato a __LOW__ per essere letto (nell'esempio GPIO 10)
+
+----
+
+## Protocolli di comunicazione
+### SPI - Implementazione su Arduino
+
+![SPI_arduino](lib/img/SPI_arduino.jpg)
 
 ---
 
