@@ -174,6 +174,49 @@ Per implementare una connessione SPI su Arduino vanno usati 4 pin digitali, uno 
 ## Protocolli di comunicazione
 ### I2C
 
+__Inter-integrated circuit__ (I2C) è un protocollo di comunicazione che risolve molti dei problemi dei due protocolli precedentemente elencati.
+
+* Permette di connettere __più master a più slave__
+* Come SPI, è __sincrono__
+* È semplice da implementare: bastano __due cavi__ e un po' di resistori
+
+----
+
+## Protocolli di comunicazione
+### I2C
+
+Come detto prima, I2C richiede due soli cavi:
+
+* __SDA__, per i dati
+* __SCL__, per il clock
+
+Il circuito deve essere sempre __open drain__ (i canali possono essere settati solo a LOW dai dispositivi). Questo richiede l'uso di __resistori di pull-up__ (normalmente da 4.7 kOhm), che garantiscono che i canali siano in HIGH quando sono in stato di idle
+
+----
+
+## Protocolli di comunicazione
+### I2C
+
+![I2C_circuit](lib/img/I2C_circuit.jpg)
+
+----
+
+## Protocolli di comunicazione
+### I2C
+
+Il protocollo I2C utilizza degli __indirizzi__ per interfacciarsi con diversi slaves. Questo permette di utilizzare un singolo canale digitale per la selezione dello slave, al contrario di SPI, che necessita di un canale per slave.
+
+![I2C_address](lib/img/I2C_address.jpg)
+
+----
+
+## Protocolli di comunicazione
+### I2C - Implementazione su Arduino
+
+I2C viene implementato su Arduino tramite la libreria __Wire.h__ (a meno che non ci sia una libreria già scritta da qualcun'altro per lo specifico sensore), utilizzando il pin analogico A4 per SDA e il pin analogico A5 per SCL.
+
+È possibile connettere più di uno un master allo stesso bus I2C, ma __solo un master alla volta può comunicare con uno degli slave__, per evitare di generare una coda di accesso al bus. Inoltre, i device master __non__ possono comunicare tra di loro sullo stesso bus I2C.
+
 ---
 
 # Fonti e risorse utili
@@ -184,4 +227,5 @@ Per implementare una connessione SPI su Arduino vanno usati 4 pin digitali, uno 
 ----
 
 # Grazie per l'attenzione!
+
 ![creative commons](lib/img/creativecommons-by-nc-sa.svg)
