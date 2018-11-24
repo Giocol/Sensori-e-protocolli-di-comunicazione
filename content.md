@@ -84,6 +84,11 @@ Il protocollo __UART__ (Universal Asynchronous Receiver/Transmitter) è un proto
 
 Lavora su due canali: __TX__ in trasmissione e __RX__ in ricezione.
 
+----
+
+## Protocolli di comunicazione
+### UART
+
 ![RX_TX](lib/img/UART_RX_TX.jpg)
 
 ----
@@ -92,6 +97,11 @@ Lavora su due canali: __TX__ in trasmissione e __RX__ in ricezione.
 ### UART
 
 La comunicazione è asincrona, quindi __non scandita da un clock__, e di conseguenza, per assicurasi che i dati ricevuti siano gli stessi dati trasmessi, è necessario "spezzare" il flusso di dati in pacchetti di formato prestabilito.
+
+----
+
+## Protocolli di comunicazione
+### UART
 
 ![packet](lib/img/UART_packet.jpg)
 
@@ -125,6 +135,11 @@ Il protocollo __SPI__ (Serial Peripheral Interface) è molto diverso da UART.
 
 ![SPI](lib/img/SPI.jpg)
 
+----
+
+## Protocolli di comunicazione
+### SPI
+
 * __MOSI__(Master In, Slave Out): canale di trasmissione dati da master a slave
 * __SCK__ (SPI Clock): stabilisce la velocità di trasmissione e la sincronizza.
 * __SS__ (Slave Select): seleziona lo slave con cui il master comunicherà
@@ -136,6 +151,13 @@ Il protocollo __SPI__ (Serial Peripheral Interface) è molto diverso da UART.
 ### SPI - Esempio con più slaves
 
 ![SPI_twoslaves](lib/img/SPI_twoslaves.jpg)
+
+
+----
+
+## Protocolli di comunicazione
+### SPI - Esempio con più slaves
+
 
 Il master necessita di una singolo canale MISO, anche in presenza di più slaves
 
