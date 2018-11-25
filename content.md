@@ -4,7 +4,7 @@
 Giorgio Colomban
 `gcolomban@gmail.com`
 
-![Logo POuL](lib/img/logo-text-white.svg)
+![Logo POuL](poul/img/logo-text-white.svg)
 
 
 ---
@@ -89,7 +89,7 @@ Lavora su due canali: __TX__ in trasmissione e __RX__ in ricezione.
 ## Protocolli di comunicazione
 ### UART
 
-![RX_TX](lib/img/UART_RX_TX.jpg)
+![RX_TX](poul/img/UART_RX_TX.jpg)
 
 ----
 
@@ -103,7 +103,7 @@ La comunicazione è asincrona, quindi __non scandita da un clock__, e di consegu
 ## Protocolli di comunicazione
 ### UART
 
-![packet](lib/img/UART_packet.jpg)
+![packet](poul/img/UART_packet.jpg)
 
 ----
 
@@ -133,7 +133,7 @@ Il protocollo __SPI__ (Serial Peripheral Interface) è molto diverso da UART.
 ## Protocolli di comunicazione
 ### SPI
 
-![SPI](lib/img/SPI.jpg)
+![SPI](poul/img/SPI.jpg)
 
 ----
 
@@ -150,7 +150,7 @@ Il protocollo __SPI__ (Serial Peripheral Interface) è molto diverso da UART.
 ## Protocolli di comunicazione
 ### SPI - Esempio con più slaves
 
-![SPI_twoslaves](lib/img/SPI_twoslaves.jpg)
+![SPI_twoslaves](poul/img/SPI_twoslaves.jpg)
 
 
 ----
@@ -189,7 +189,7 @@ Per implementare una connessione SPI su Arduino vanno usati 4 pin digitali, uno 
 ## Protocolli di comunicazione
 ### SPI - Implementazione su Arduino
 
-![SPI_arduino](lib/img/SPI_arduino.jpg)
+![SPI_arduino](poul/img/SPI_arduino.jpg)
 
 ---
 
@@ -219,7 +219,7 @@ Il circuito deve essere sempre __open drain__ (i canali possono essere settati s
 ## Protocolli di comunicazione
 ### I2C
 
-![I2C_circuit](lib/img/I2C_circuit.jpg)
+![I2C_circuit](poul/img/I2C_circuit.jpg)
 
 ----
 
@@ -228,7 +228,7 @@ Il circuito deve essere sempre __open drain__ (i canali possono essere settati s
 
 Il protocollo I2C utilizza degli __indirizzi__ per interfacciarsi con diversi slaves. Questo permette di utilizzare un singolo canale digitale per la selezione dello slave, al contrario di SPI, che necessita di un canale per slave.
 
-![I2C_address](lib/img/I2C_address.jpg)
+![I2C_address](poul/img/I2C_address.jpg)
 
 ----
 
@@ -250,4 +250,6 @@ I2C viene implementato su Arduino tramite la libreria __Wire.h__ (a meno che non
 
 # Grazie per l'attenzione!
 
-![creative commons](lib/img/creativecommons-by-nc-sa.svg)
+![Logo-notext](poul/img/logo-notext-white.svg)
+
+![creative commons](poul/img/creativecommons-by-nc-sa.svg)

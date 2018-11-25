@@ -14,13 +14,13 @@
         content="black-translucent">
 
   <!-- reveal.js base stylesheel. Don't remove nor edit this. -->
-  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
 
   <!-- POuL theme for reveal.js -->
-  <link rel="stylesheet" href="css/theme/poul.css" id="theme">
+  <link rel="stylesheet" href="poul/css/poul.css" id="theme">
 
   <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="lib/css/hopscotch.css">
+  <link rel="stylesheet" href="reveal.js/lib/css_highlight/hopscotch.css">
 
   <!-- Printing and PDF exports -->
   <script>
@@ -28,25 +28,45 @@
     link.rel = 'stylesheet';
     link.type = 'text/css';
     link.href = window.location.search.match(/print-pdf/gi)
-                ? 'css/print/pdf.css' : 'css/print/paper.css';
+                ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
 </head>
 
 <body>
   <div class="reveal">
+
     <div class="slides">
+      <section class="intro">
+        <h1>Corsi Punto Croce 2018</h1>
+        <h2>Come fare gli orli</h2>
+
+        <img src="poul/img/logo-text-white.svg"/>
+
+        <p>Autore &lt;email@email.com&gt;</p>
+      </section>
       <section data-markdown="content.md"
                data-charset="utf-8"
                data-separator="^\r?\n---\r?\n$"
                data-separator-vertical="^\r?\n----\r?\n$"
                data-separator-notes="^Notes:">
       </section>
+      <section class="outro">
+        <h1>Thank you!</h1>
+
+        <img class="logo" src="poul/img/logo-notext-white.svg"/>
+
+        <p>Rilasciato sotto licenza Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</p>
+
+        <img class="cc" src="poul/img/creativecommons-by-nc-sa.svg"/>
+
+        <p>Autore &lt;email@email.com&gt;</p>
+      </section>
     </div>
   </div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
 
   <script>
     Reveal.initialize({
@@ -58,24 +78,37 @@
       markdown: {
         smartypants: true,
       },
+      keyboard: {
+        38: 'prev',  // Up arrow
+        40: 'next'   // Down arrow
+      },
+      math: {
+		mathjax: 'reveal.js/lib/js/mathjax/MathJax.js',
+		config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	  },
+
       dependencies: [
         {
-          src: 'plugin/markdown/marked.js',
+          src: 'reveal.js/plugin/markdown/marked.js',
           condition: function(){ return !!document.querySelector('[data-markdown]'); }
         },
         {
-          src: 'plugin/markdown/markdown.js',
+          src: 'reveal.js/plugin/markdown/markdown.js',
           condition: function() { return !!document.querySelector('[data-markdown]'); }
         },
         {
-          src: 'plugin/highlight/highlight.js',
+          src: 'reveal.js/plugin/highlight/highlight.js',
           async: true,
           callback: function() { hljs.initHighlightingOnLoad(); }
         },
         {
-          src: 'plugin/notes/notes.js',
+          src: 'reveal.js/plugin/notes/notes.js',
           async: true
         },
+        {
+          src: 'reveal.js/plugin/math/math.js',
+          async: true
+        }
       ]
     });
   </script>
