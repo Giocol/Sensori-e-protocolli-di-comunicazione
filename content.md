@@ -1,14 +1,3 @@
-# Arduino 2.0
-## Sensori e protocolli di comunicazione
-
-Giorgio Colomban
-`gcolomban@gmail.com`
-
-![Logo POuL](poul/img/logo-text-white.svg)
-
-
----
-
 # Cos'è un sensore?
 
 > Un sensore è un componente che fisicamente effettua la trasformazione della grandezza
@@ -246,10 +235,4 @@ I2C viene implementato su Arduino tramite la libreria __Wire.h__ (a meno che non
 * [Slides](https://slides.poul.org/2018/corsi-arduino/sensori/) di Raffaele Di Campli - corsi Arduino 2018
 * [Tutorial](https://www.deviceplus.com/how-tos/arduino-guide/arduino-communication-protocols-tutorial/) esteso sui protocolli di comunicazione
 
-----
 
-# Grazie per l'attenzione!
-
-![Logo-notext](poul/img/logo-notext-white.svg)
-
-![creative commons](poul/img/creativecommons-by-nc-sa.svg)
