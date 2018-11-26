@@ -234,5 +234,3 @@ I2C viene implementato su Arduino tramite la libreria __Wire.h__ (a meno che non
 
 * [Slides](https://slides.poul.org/2018/corsi-arduino/sensori/) di Raffaele Di Campli - corsi Arduino 2018
 * [Tutorial](https://www.deviceplus.com/how-tos/arduino-guide/arduino-communication-protocols-tutorial/) esteso sui protocolli di comunicazione
-
-
