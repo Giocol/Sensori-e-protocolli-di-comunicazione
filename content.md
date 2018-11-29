@@ -190,6 +190,7 @@ __Inter-integrated circuit__ (I2C) è un protocollo di comunicazione che risolve
 * Permette di connettere __più master a più slave__
 * Come SPI, è __sincrono__
 * È semplice da implementare: bastano __due cavi__ e un po' di resistori
+* Come UART, è __half duplex__
 
 ----
 
