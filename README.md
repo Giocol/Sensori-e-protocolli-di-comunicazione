@@ -1,3 +1,5 @@
+Slides for an introductory talk on sensors and communications protocols, made with POuL's reveal.js template.
+
 # POuL reveal.js template
 
 This is a base template that will allow you to make state-of-art presentations
